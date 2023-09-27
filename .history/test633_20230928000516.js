@@ -1,15 +1,14 @@
 // ! 633. Sum of Square Numbers
 var judgeSquareSum = x => {
     let l = 0;
-    let r = Math.floor(Math.sqrt(x));
+    let r = Math.sqrt(x);
     while (l <= r) {
         // let sum = Math.pow(l, 2) + Math.pow(r, 2);
         let sum = l * l + r * r
         if (sum == x) {
-            console.log(l + " * " + l + " + " + r + " * " + r + " = " + x);
             return true;
         } else if (sum < x) {
-            l++;
+            l++\;
         } else r--;
     }
     return false;
